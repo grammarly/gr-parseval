@@ -28,7 +28,7 @@
    NB. Words are not accounted by the metric.
 
    Different variants of Parseval may be used
-   (see http://tech.grammarly.com/blog/posts/Evaluating-Constituency-Parsers.html
+   (see http://tech.grammarly.com/blog/posts/The-Dirty-Little-Secret-of-Constituency-Parser-Evaluation.html
     for details):
 
    - UNLABELLED compares only structure, not considering node labels
