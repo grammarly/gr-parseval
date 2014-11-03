@@ -1,3 +1,6 @@
+;;;; Parseval testing
+;;;; (c) 2014 Grammarly Inc.
+
 (in-package #:parseval)
 (named-readtables:in-readtable rutils-readtable)
 
@@ -42,8 +45,8 @@
         :for msrm :in *measurements* :do
     (let* (#+nil (max-d (1- (tree-depth (? case :test))))
            (weight `(:weight ,(lambda (node)
-                                (- 3/2 (/ 1 (expt 3/2 (1- (tree-depth node 'min)))))
-                                #+nil (+ 1/2 (/ (1- (tree-depth node 'min)) max-d))))))
+                                (- 3/2 (/ 1 (expt 3/2 (1- (tree-depth node 'max)))))
+                                #+nil (+ 1/2 (/ (1- (tree-depth node 'max)) max-d))))))
       (should be every-equal-approx msrm
               (mapcar (lambda (args)
                         (* 100 (float (third (apply #'parseval

@@ -1,3 +1,6 @@
+;;;; Parseval implementation
+;;;; (c) 2014 Grammarly Inc.
+
 (defpackage #:parseval
   (:use :common-lisp #:rutilsx #+dev #:should-test)
   (:export #:parseval
